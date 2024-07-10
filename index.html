@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
+        <!--<link rel="stylesheet" href="styles.css">-->
+
+        <style>
+            h1 {
+                
+            }
+
+        </style>
     </head>
 
     <body>
@@ -39,20 +47,28 @@
             <section>
                 <h2>Projects</h2>
                 <!-- TODO: link the projects on GitHub-->
-                <ul>
-                    <li><strong>osuScoreLoader</strong><br>
-                        An application that allows you to restore files for the osu! game made with Python.
-                    </li>
-                    <li><strong>Unreal TDR Game</strong><br>
-                        Two online multiplayer games made in one with working servers through Steam as part for the TDR project for bachalloreate.
-                        Consists of a Co-Operative game where players have to work together to scape a Labaerynth and a versus mode game in which players race each other.
-                        The project was made in Unreal Engine 4.
-                    </li>
-                    <li><strong>Front-End HTML Challenge</strong><br>
-                        A website to feature my portfolio applying what I have learned in the Basic Front-End course taught by the URV.</li>
-                </ul>
+                <div class="projects">
+                    <div>osuScoreLoader
+                        <p>Developed a Python application for restoring files in the osu! game.</p>
+                    </div>
+                    
+                    <div>Unreal TDR Game
+                        <p>Created two online multiplayer games using Unreal Engine 4 as part of a bachelor’s degree project.</p>
+                        <ul>
+                            <li><strong>Co-Operative Mode:</strong> Players collaborate to escape a labyrinth.</li>
+                            <li><strong>Versus Mode:</strong> Players compete in a race against each other.</li>
+                        </ul>
+                        <p>Implemented working servers through <strong>Steam</strong></p>
+                    </div>
+
+                    <div>
+                    <div>Front-End HTML Challenge
+                        <p>A website to feature my portfolio applying what I have learned in the Basic Front-End course taught by the URV.</p>
+                    </div>
+                </div>
             </section>
         </main>
+        
         <footer>
             <p>&copy; 2024 Oupman Miralles. All rights reserved.</p>
         </footer>
