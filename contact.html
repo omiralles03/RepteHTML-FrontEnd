@@ -4,29 +4,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact</title>
+        <link rel="stylesheet" href="styles.css">
+        
     </head>
-
+    
     <body>
         <header>
-            <nav>
+            <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="cv.html">Porftofilo</a></li>
+                    <li><a href="cv.html">Curriculum Vitae</a></li>
                     <li><a href="js.html">JavaScript Challenge</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="#">Languages ▼</a>
+                        <ul>
+                            <li><a href="#">Catalan</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Spanish</a></li>
+                            <li><a href="#">German</a></li>
+                            <li><a href="#">French</a></li>
+                            <li><a href="#">Italian</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
-
-        <main>
-            
-            <form action="https://formspree.io/f/movavqwg" method="POST">
+        </header>
+        
+        <main>            
+            <form class="formBox" action="https://formspree.io/f/movavqwg" method="POST">
                 <h1>Contact</h1>
                 <input type="text" name="first" placeholder="First Name" autocomplete="off" required>
                 <input type="text" name="last" placeholder="Last Name" autocomplete="off" required>
                 <input type="email" name="email" placeholder="Email Adress" autocomplete="off" required>
                 <textarea rows="5" cols="60" name="message" placeholder="Enter Message" autocomplete="off" required></textarea>
-                <input type="checkbox" name="terms" required><br>
+                <input type="checkbox" name="terms" required>
                 <label for="terms">
                     I agree to the <a href="terms.html" target="_blank">Terms of Use </a>
                     and <a href="privacy.html" target="_blank">Privacy Policy</a>.
