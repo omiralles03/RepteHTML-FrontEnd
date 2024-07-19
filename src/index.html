@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./styles2.css">
+</head>
+<body>
+    <div class="background-overlay">
+        <header>
+            <nav class="navbar">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cv.html">Curriculum Vitae</a></li>
+                    <li><a href="js.html">JavaScript Challenge</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="toggle-button">
+                    <label for="menu-toggle">
+                        <img src="./assets/menu.svg" alt="menu" class="menu-button">
+                    </label>
+                    <input type="checkbox" id="menu-toggle">
+                </div>
+            </nav>  
+
+            <ul class="dropdown">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">Curriculum Vitae</a></li>
+                <li><a href="js.html">JavaScript Challenge</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>          
+        </header>
+
+        <main class="main">
+            <section class="welcome-section">
+                <h2 class="section-title">Welcome to My Portfolio</h2>
+                <p>This is the homepage of my personal portfolio.</p>
+                <p>On this site, you will find my Curriculum Vitae, a JavaScript challenge project, and a contact form. Feel free to explore and learn more about my work and experience.</p>
+            </section>
+
+            <section class="about-section">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    My name is Oupman Miralles, a second year Computer Science student, passionate about web development and applications.
+                </p>
+                <p>
+                    Experienced in creating dynamic and responsive websites and small desktop applications to complement already existing softwares. 
+                    I enjoy solving complex problems and learning new technologies.
+                </p>
+            </section>
+
+            <section class="projects-section">
+                <h2 class="section-title section-title-black">Projects</h2>
+                <div class="projects-container">
+                    <a class="project-card" 
+                         style="background-image: url('./assets/osu.webp');"
+                         href="https://github.com/omiralles03/osuScoreLoader"
+                         target="_blank">
+                        <div class="project-info">
+                            <h5 class="project-title">osuScoreLoader</h5>
+                            <p>Developed a Python application for restoring files in the osu! game.</p>
+                        </div>
+                    </a>
+                    <a class="project-card"  
+                         style="background-image: url('./assets/unreal.webp');"
+                         href="https://github.com/omiralles03/Multi_Project"
+                         target="_blank">
+                        <div class="project-info">
+                            <h5 class="project-title">Unreal TDR Game</h5>
+                            <p>Created two online multiplayer games using Unreal Engine 4 as part of a bachelor’s degree project.</p>
+                            <ul>
+                                <li><strong>Co-Operative Mode:</strong> Players collaborate to escape a labyrinth.</li>
+                                <li><strong>Versus Mode:</strong> Players compete in a race against each other.</li>
+                            </ul>
+                            <p>Implemented working servers through <strong>Steam</strong></p>
+                        </div>
+                    </a>
+                    <a class="project-card"  
+                         style="background-image: url('./assets/html.webp');"
+                         href="https://github.com/omiralles03/RepteHTML-FrontEnd"
+                         target="_blank">
+                        <div class="project-info">
+                            <h5 class="project-title">Front-End HTML Challenge</h5>
+                            <p>A website to feature my portfolio applying what I have learned in the Basic Front-End course taught by the URV.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Oupman Miralles. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+.background-overlay {
+    background-image: url(./assets/snow-mountains.webp);
+    background-size: cover;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+}
+
+/* DEFAULT STYLES */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR STYLES */
+
+header {
+    position: fixed;
+    align-items: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    color: white;
+}
+
+.navbar .links {
+    display: flex;
+}
+
+.navbar .links li {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar .links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar .links li a {
+    color: white;
+    font-size: 1rem;
+    display: block;
+    height: 100%;
+    line-height: 60px;
+    transition: background-color 0.3s ease-out;
+}
+
+/* Checkbox Hack */
+#menu-toggle {
+    display: none;
+}
+
+.toggle-button .menu-button {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DROPDOWN STYLES */
+.dropdown {
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    width: 240px;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-bottom-right-radius: 20px;
+}
+
+#menu-toggle:checked + .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    display: block;
+    line-height: 50px;
+    transition: background-color 0.3s ease-out;
+}
+
+.dropdown a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* RESPONSIVE STYLES */
+@media(max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+    .toggle-button {
+        display: flex;
+        justify-content: start;
+    }
+
+    .toggle-button .menu-button {
+        display: flex;
+    }
+
+    .dropdown {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-button:, .dropdown{
+        display: flex;
+    }
+}
+
+/* MAIN CONTENT STYLES */
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    margin-top: 80px; /* Added margin to provide more space from the navbar */
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.section-title-black {
+    color: white;
+}
+
+.welcome-section, .about-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    color: white;
+    width: 100%;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: 450px;
+    overflow-x: auto;
+    justify-content: center; /* Centered the project cards */
+}
+
+.project-card {
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+    min-width: 320px;
+    max-width: 320px;
+    transition: transform 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(0.95);
+}
+
+.project-info {
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: background-color 0.1s ease-in-out;
+    overflow-y: auto; /* Make the card content scrollable */
+}
+
+.project-info:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* FOOTER STYLES */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
