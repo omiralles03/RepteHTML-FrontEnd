@@ -10,8 +10,12 @@
     text-decoration: none;
 }
 
+body{
+    background: linear-gradient(24deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%); 
+}
+
 header{
-    position: fixed;
+    position: sticky;
     right: 0;
     top: 0;
     z-index: 50;
@@ -148,8 +152,6 @@ header{
     height: 100%;
     width: 100%;
     min-height: 200vh;
-    background: rgb(0,0,0);
-    background: linear-gradient(24deg, rgba(0,0,0,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%); 
 }
 
 /* WELCOME STYLES */
@@ -384,7 +386,7 @@ header{
     gap: 20px;
     width: 100%;
     max-width: 500px;
-    background: #f9f9f9;
+    background: white;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -400,20 +402,20 @@ header{
 .formBox button {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid grey;
     border-radius: 5px;
     font-size: 16px;
 }
 
 .formBox button {
-    background-color: #5cb85c;
+    background-color: green;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 .formBox button:hover {
-    background-color: #4cae4c;
+    background-color: rgb(76, 174, 76);
 }
 
 .checkbox-container {
@@ -431,6 +433,13 @@ header{
 }
 
 /* --------------------------------- RESPONSIVE --------------------------------- */
+/*  
+    * 600px (mòbil)
+    * 768px (tauleta vertical)
+    * 992px (tauleta horitzontal)
+    * 1200px (escriptori)
+*/
+
 
 @media (max-width: 1450px) {
     header{
@@ -505,3 +514,53 @@ header{
     }
 
 }
+
+
+
+/* ---------------------- CARDS STYLES ------------------ */
+.deck{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+    overflow-x: scroll;
+    padding-top: 100px;
+    justify-content: center;
+}
+.card{
+    width: 150px;
+    height: 250px;
+    background-color: grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, .3);
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+}
+
+.card h3{
+    font-size: .75rem;
+    text-align: center;
+}
+
+.card td{
+    font-size: .5rem;
+    padding: 2px 5px;
+}
+
+.card th{
+    font-size: .5rem;
+}
+  

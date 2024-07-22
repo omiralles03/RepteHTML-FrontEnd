@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenge</title>
+    <link rel="stylesheet" href="./styles2.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script defer src="./script.js"></script>
+    <script src="./game.js"></script>
+</head>
+
+<body>
+    <header class="head">
+        <a href="#" class="logo"><span class="logo-span">RepteHTML-FrontEnd</span></a>
+        <ul class="links">
+            <a href="index2.html">Home</a>
+            <a href="cv2.html">Curriculum Vitae</a>
+            <a href="js.html">JavaScript Challenge</a>
+            <a href="contact.html">Contact</a>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <main class="main">
+        <input id="limit" min="1" type="number">
+        <button id="getCards" onclick="startGame()">Get Cards</button>
+        <div id="board">
+            <section class="deck" id="deck1">
+            </section>
+
+            <section class="deck" id="deck2">
+
+            </section>
+        </div>
+
+        <template id="card-template">
+            <button class="card" onclick="selectCard(this)">
+                <img>
+                <h3></h3>
+                <table>
+                    <tr>
+                        <th>HP</th>
+                        <th>ATK</th>
+                        <th>DEF</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </button>
+        </template>
+
+    </main>
+</body>
+
+</html>
