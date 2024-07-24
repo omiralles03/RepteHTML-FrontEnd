@@ -527,10 +527,14 @@ header{
     padding-top: 100px;
     justify-content: center;
 }
+
 .card{
     width: 150px;
     height: 250px;
     background-color: grey;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -538,13 +542,38 @@ header{
     padding: 10px;
     align-items: center;
     justify-content: center;
+    transition: .1s ease-in-out;
 }
 
-.card:hover{
+.PHY{
+    background-color: rgb(150, 150, 0);
+}
+
+.STR{
+    background-color: rgb(150, 0, 0);
+}
+
+.INT{
+    background-color: rgb(150, 0, 150);
+}
+
+.TEQ{
+    background-color: rgb(0, 150, 0);
+}
+
+.AGL{
+    background-color: rgb(0, 150, 150);
+}
+
+.card:not(:disabled):hover{
     cursor: pointer;
-    background-color: rgb(255, 255, 255, .3);
+    filter: brightness(1.25);
+    transform: translateY(-20px);
 }
 
+.card:disabled{
+    filter: brightness(.3);
+}
 .card img{
     width: 100px;
     height: 100px;
@@ -564,3 +593,16 @@ header{
     font-size: .5rem;
 }
   
+.selected{
+    transform: translateY(-20px);
+    border-color: white;
+    filter: brightness(1.25);
+}
+
+#playDIV{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    padding-top: 50px;
+    justify-content: center;
+}

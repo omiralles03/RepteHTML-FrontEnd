@@ -31,9 +31,16 @@
     <main class="main">
         <input id="limit" min="1" type="number">
         <button id="getCards" onclick="startGame()">Get Cards</button>
+
         <div id="board">
             <section class="deck" id="deck1">
             </section>
+
+            <div id="playDIV">
+                <button id="playBTN" onclick="playerAttack()">
+                    ATTACK
+                </button>
+            </div>
 
             <section class="deck" id="deck2">
 
@@ -56,6 +63,7 @@
                         <td></td>
                     </tr>
                 </table>
+                <meter></meter>
             </button>
         </template>
 
