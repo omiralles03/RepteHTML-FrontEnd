@@ -7,6 +7,24 @@ let deckPlayer;
 let selectedEnemy;
 let selectedPlayer;
 let playing = false;
+let playerAlive;
+let enemyAlive;
+
+const board = document.getElementById('board');
+board.style.display = "none";
+
+const gameMenu = document.getElementById('game-menu');
+
+gameMenu.style.display = "flex";
+const atkBTN = document.getElementById('atkBTN');
+
+const textCPU = document.getElementById('CPU');
+const textPLAYER = document.getElementById('PLAYER');
+
+const matchResults = document.getElementById('match-results');
+const messageResults = document.getElementById('message-results');
+
+matchResults.style.display = "none";
 
 async function fetchCharacters() {
   const res = await fetch("./characters.json");
@@ -16,10 +34,14 @@ async function fetchCharacters() {
 }
 
 
-async function startGame(){
+async function startGame(limit = 7){
+  board.style.display = "grid";
+  gameMenu.style.display = "none";
+  textPLAYER.style.color = "red";
+
   playing = false;
   const characters = await fetchCharacters();
-  const limit = document.getElementById("limit").value;
+  //const limit = document.getElementById("limit").value;
   deckEnemy = getDeck(characters, limit);
   deckPlayer = getDeck(characters, limit);
 
@@ -45,13 +67,21 @@ function fillBoard(deck, section){
     tds[1].innerText=character.rainbowAttack;
     tds[2].innerText=character.rainbowDefense;
     
-    const meter = button.querySelector('meter');
-    meter.min = 0;
-    meter.max = character.rainbowHP;
-    meter.low = character.rainbowHP/3;
-    meter.high = 2*character.rainbowHP/3;
-    meter.value = character.rainbowHP;
-    meter.optimum = character.rainbowHP;
+    //document.getElementById('atk').style.color = "red";
+    //document.getElementById('def').style.color = "blue";
+    
+    const meter = Array.from(button.querySelectorAll('meter'));
+    console.log(meter)
+    meter[0].min = 0;
+    meter[0].max = character.rainbowHP;
+    meter[0].low = character.rainbowHP/3;
+    meter[0].high = 2*character.rainbowHP/3;
+    meter[0].value = character.rainbowHP;
+    meter[0].optimum = character.rainbowHP;
+    meter[1].max = 24000;
+    meter[1].value = character.rainbowAttack;
+    meter[2].max = 24000;
+    meter[2].value = character.rainbowDefense;
 
     section.appendChild(button); // Add the cloned card to the section in HTML
     //console.log(character);
@@ -100,16 +130,44 @@ async function playerAttack(){
   const player = deckPlayer[selectedPlayer.getAttribute('data-id')];
   playing = true;
   attack(player, selectedPlayer, enemy, selectedEnemy)
+  textPLAYER.style.color = "white";
+  atkBTN.disabled = true;
   if(checkMatchEnd()){
-    console.log('PLAYER WON');
-    return;
+    matchEND();
   }
+  textCPU.style.color = "red";
   await enemyAttack();
   if(checkMatchEnd()){
-    console.log('ENEMY WON');
-    return;
+    matchEND();
   }
+  atkBTN.disabled = false;
+  textPLAYER.style.color = "red";
+  textCPU.style.color = "white";
   playing = false;
+}
+
+function matchEND(){
+  board.style.display = "none";
+  matchResults.style.display = "flex";
+  
+  if (messageResults) {
+      const resultMessage = playerAlive ? "VICTORY" : "DEFEAT";
+      messageResults.innerText = resultMessage;
+      const color = playerAlive ? "cyan" : "red";
+      const shadowColor = playerAlive ? "darkcyan" : "darkred";
+      messageResults.style.textShadow = `1px 1px 2px rgba(255, 255, 255, .1), 0 0 1em ${color}, 0 0 0.2em ${shadowColor}`;
+  } else {
+      console.error('Element with ID message-results not found.');
+  }
+  return;
+}
+
+function playAGAIN(){
+  matchResults.style.display = 'none';
+  gameMenu.style.display = 'flex';
+  playing = true;
+  atkBTN.disabled = false;
+
 }
 
 async function enemyAttack(){
@@ -183,7 +241,7 @@ function attack(attacker, attackerCard, defender, defenderCard){
 }
 
 function checkMatchEnd(){
-  let playerAlive = false;
+  playerAlive = false;
   for(let card of deckPlayer){
     console.log('CHECK CARD: ', card);
     if (card.rainbowHP > 0) {
@@ -197,7 +255,7 @@ function checkMatchEnd(){
     return true;
   }
 
-  let enemyAlive = false;
+  enemyAlive = false;
   for(let card of deckEnemy){
     if (card.rainbowHP > 0) {
       enemyAlive = true;

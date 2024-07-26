@@ -12,167 +12,193 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    
-        <script defer src="./script.js"></script>
 
     </head>
 
     <body>
 
+        <div id="videoBG">
+            <video autoplay muted loop id="myVideo">
+                <source src="./assets/Earth.mp4" type="video/mp4">
+            </video>
+        </div>
         <header class="head">
             <a href="#" class="logo"><span class="logo-span">RepteHTML-FrontEnd</span></a>
-            <ul class="links">
-                <a href="index2.html">Home</a>
-                <a href="cv2.html">Curriculum Vitae</a>
-                <a href="game.html">JavaScript Challenge</a>
-                <a href="contact.html">Contact</a>
+            <ul class="links pc">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="cv2.html">Curriculum Vitae</a></li>
+                <li><a href="game.html">JavaScript Challenge</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div class="bx bx-menu" id="menu-icon"></div>   
+            <nav class="nav-head">
+                <input type="checkbox" id="menu-input" class="nav-input">
+                <label for="menu-input" class="nav-toggle"></label>
+                <ul class="links phone">
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="cv2.html">Curriculum Vitae</a></li>
+                    <li><a href="game.html">JavaScript Challenge</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
     
-        <main class="main">
-            <br><br><br><br><br><br><br><br>
+        <main class="main-cv">
             
             <section class="aboutCV">
                 
                 <h2>About</h2>
+                <div>
+                    <img src="./assets/oupman.png" alt="Portfolio picture" title="Picture of Oupman" height="300" width="300">
+                    <p>
+                        My name is <strong>Oupman Miralles Escolà</strong>, a second year Computer Science student, passionate about web development and applications. 
+                        <br><br>
+                        Experienced in creating dynamic and responsive websites and small desktop applications to complement already existing softwares. 
+                        I enjoy solving complex problems and learning new technologies.
+                    </p>
+                </div> 
                 
-                <img src="./assets/oupman.png" alt="Portfolio picture" title="Picture of Oupman" height="300" width="300">
-                <p>My name is <strong>Oupman Miralles Escola</strong></p>
-                <p>
-                    My name is Oupman Miralles, a second year Computer Science student, passionate about web development and applications. 
-                    Experienced in creating dynamic and responsive websites and small desktop applications to complement already existing softwares. 
-                    I enjoy solving complex problems and learning new technologies.
-                </p>
             </section>
             
-            <br><br>
-
             <section class="PersonalInfo">
                 <h2>Personal Info</h2>
-
-                <p>Name: <span>Oupman</span></p>
-                <p>Surname: <span>Miralles Escolà</span></p>
-                <p>Date of birth: <span>03/03/2004</span></p>
-                <p>Born in: Tarragona</p>
-                <p>Residency address: Reus</p>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Name:</th>
+                            <td>Oupman</td>
+                        </tr>
+                        <tr>
+                            <th>Surname:</th>
+                            <td>Miralles Escolà</td>
+                        </tr>
+                        <tr>
+                            <th>Date of birth:</th>
+                            <td>03/03/2004</td>
+                        </tr>
+                        <tr>
+                            <th>Born in:</th>
+                            <td>Tarragona</td>
+                        </tr>
+                        <tr>
+                            <th>Residency address:</th>
+                            <td>Reus</td>
+                        </tr>
+                    </table>
+                </div>
             </section>
 
-            <br><br>
-
-            <section>
+            <section class="Languages">
                 <h2>Languages</h2>
-                
-                <table>
-                    <tr>
-                        <th>Language</th>
-                        <th colspan="4">Level</th>
-                    </tr>
+                <div>
+                    <table>
+                        <tr>
+                            <th>Language</th>
+                            <th colspan="4" id="lvl">Level</th>
+                        </tr>
 
-                    <tr>
-                        <th>
-                            <th>Low</th>
-                            <th>Mid</th>
-                            <th>High</th>
-                            <th>Native</th>
-                        </th>
-                    </tr>
+                        <tr>
+                            <th>
+                                <th>Low</th>
+                                <th>Mid</th>
+                                <th>High</th>
+                                <th>Native</th>
+                            </th>
+                        </tr>
 
-                    <tr>
-                        <th>Catalan</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>X</td>
-                    </tr>
+                        <tr>
+                            <th>Catalan</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="./assets/check.gif"></td>
+                        </tr>
 
-                    <tr>
-                        <th>Spanish</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>X</td>
-                    </tr>
+                        <tr>
+                            <th>Spanish</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="./assets/check.gif"></td>
+                        </tr>
 
-                    <tr>
-                        <th>English</th>
-                        <td></td>
-                        <td></td>
-                        <td>X</td>
-                        <td></td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th>English</th>
+                            <td></td>
+                            <td></td>
+                            <td><img src="./assets/check.gif"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
             </section>
-
-            <br><br>
 
             <section class="workExperience">
                 <h2>Work Experience</h2>
-
-                <ul>
-                    <li><strong>Waiter </strong><i>(Cambrils, 2021-2024)</i></li>
-                    <p>Serving customers, cleaning and doing check outs in a restaurant.</p>
-                </ul>
+                <div>
+                    <ul>
+                        <li><strong>Waiter </strong><i>(Cambrils, 2021-2024)</i></li>
+                        <p>Serving customers, cleaning and doing check outs in a restaurant.</p>
+                    </ul>
+                </div>
             </section>
-
-            <br><br>
 
             <section class="skills">
                 
                 <h2>Skills</h2>
+                <div>
+                    <ol>
+                        <li>Programming Languages</li>
+                        <p>
+                            Proficient in Java, C and Python. Capable in Lua, C#, Go, C++. 
+                            Knowledge in Game Development and graphic engines such as Unreal Engine and Unity with C++ and blueprints.
+                        </p>
 
-                <ol>
-                    <li>Programming Languages</li>
-                    <p>
-                        Proficient in Java, C and Python. Capable in Lua, C#, Go, C++. 
-                        Knowledge in Game Development and graphic engines such as Unreal Engine and Unity with C++ and blueprints.
-                    </p>
-
-                    <li>Web Development</li>
-                    <p>Skilled in Front-End development, including HTML, CSS, JavaScript, PHP, and proficient in frameworks like React and Runtime environments such as Node.</p>
-                    
-                    <li>Database Management</li>
-                    <p>Experienced with MySQL and MariaDB, knowledgeable in Data Structures and Cloud Computing.</p>
-                </ol>
+                        <li>Web Development</li>
+                        <p>Skilled in Front-End development, including HTML, CSS, JavaScript, PHP, and proficient in frameworks like React and Runtime environments such as Node.</p>
+                        
+                        <li>Database Management</li>
+                        <p>Experienced with MySQL and MariaDB, knowledgeable in Data Structures and Cloud Computing.</p>
+                    </ol>
+                </div>
             </section>
 
-            <br><br>
-
-            <section class="projects-section">
+            <section class="projects-section-cv">
                 <h2>Projects</h2>
-                <div class="projects-container">
-                    <a class="project-card" 
-                         style="background-image: url('./assets/osu.webp');"
-                         href="https://github.com/omiralles03/osuScoreLoader"
-                         target="_blank">
-                        <div class="project-info">
-                            <h5 class="project-title">osuScoreLoader</h5>
-                            <p>Developed a Python application for restoring files in the osu! game.</p>
-                        </div>
-                    </a>
-                    <a class="project-card"  
-                         style="background-image: url('./assets/unreal.webp');"
-                         href="https://github.com/omiralles03/Multi_Project"
-                         target="_blank">
-                        <div class="project-info">
-                            <h5 class="project-title">Unreal TDR Game</h5>
-                            <p>Created two online multiplayer games using Unreal Engine 4 as part of a bachelor’s degree project.</p>
-                            <ul>
-                                <li><strong>Co-Operative Mode:</strong> Players collaborate to escape a labyrinth.</li>
-                                <li><strong>Versus Mode:</strong> Players compete in a race against each other.</li>
-                            </ul>
-                            <p>Implemented working servers through <strong>Steam</strong></p>
-                        </div>
-                    </a>
-                    <a class="project-card"  
-                         style="background-image: url('./assets/html.webp');"
-                         href="https://github.com/omiralles03/RepteHTML-FrontEnd"
-                         target="_blank">
-                        <div class="project-info">
-                            <h5 class="project-title">Front-End HTML Challenge</h5>
-                            <p>A website to feature my portfolio applying what I have learned in the Basic Front-End course taught by the URV.</p>
-                        </div>
-                    </a>
+                <div class="projects-div">
+                    <div class="projects-container">
+                        <a class="project-card" 
+                            style="background-image: url('./assets/osu.webp');"
+                            href="https://github.com/omiralles03/osuScoreLoader"
+                            target="_blank">
+                            <div class="project-info">
+                                <h5 class="project-title">osuScoreLoader</h5>
+                                <p>Developed a Python application for restoring files in the osu! game.</p>
+                            </div>
+                        </a>
+                        <a class="project-card"  
+                            style="background-image: url('./assets/unreal.webp');"
+                            href="https://github.com/omiralles03/Multi_Project"
+                            target="_blank">
+                            <div class="project-info">
+                                <h5 class="project-title">Unreal TDR Game</h5>
+                                <p>Created two online multiplayer games using Unreal Engine 4 as part of a bachelor’s degree project.</p>
+                                <ul>
+                                    <li><strong>Co-Operative Mode:</strong> Players collaborate to escape a labyrinth.</li>
+                                    <li><strong>Versus Mode:</strong> Players compete in a race against each other.</li>
+                                </ul>
+                                <p>Implemented working servers through <strong>Steam</strong></p>
+                            </div>
+                        </a>
+                        <a class="project-card"  
+                            style="background-image: url('./assets/html.webp');"
+                            href="https://github.com/omiralles03/RepteHTML-FrontEnd"
+                            target="_blank">
+                            <div class="project-info">
+                                <h5 class="project-title">Front-End HTML Challenge</h5>
+                                <p>A website to feature my portfolio applying what I have learned in the Basic Front-End course taught by the URV.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
             

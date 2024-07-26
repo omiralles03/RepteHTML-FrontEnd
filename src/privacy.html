@@ -6,13 +6,64 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Privacy Policy</title>
 
-        <link rel="stylesheet" href="./main_out.css">
-        <script src="./navBar.js" defer></script>
+        <style>
+            .main-terms h1,
+            .main-terms h2, 
+            .main-terms h3, 
+            .main-terms p, 
+            .main-terms ul, 
+            .main-terms li, 
+            .main-terms a{
+                text-align: justify;
+                margin-bottom: 20px;
+                padding: 0 100px;
+                color: white;
+                gap: 20px;
+                font-size: 25px;
+                font-family: "Ubuntu", sans-serif;
+            }
+            .main-terms{
+                padding-top: 90px;
+            }
+            footer{
+                color: white;
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            footer small, footer p{
+                font-size: 15px;
+            }
+
+        </style>
+
+        <link rel="stylesheet" href="./styles2.css">
     </head>
 
     <body>
         
-        <main>
+        <header class="head">
+            <a href="#" class="logo"><span class="logo-span">RepteHTML-FrontEnd</span></a>
+            <ul class="links pc">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="cv2.html">Curriculum Vitae</a></li>
+                <li><a href="game.html">JavaScript Challenge</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <nav class="nav-head">
+                <input type="checkbox" id="menu-input" class="nav-input">
+                <label for="menu-input" class="nav-toggle"></label>
+                <ul class="links phone">
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="cv2.html">Curriculum Vitae</a></li>
+                    <li><a href="game.html">JavaScript Challenge</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-terms">
             <h1>Privacy Policy</h1>
                 <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our contact form. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
             
